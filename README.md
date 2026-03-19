@@ -1,4 +1,4 @@
-# Agent Switcher Skill v2.0 - 发布说明
+# Agent selector Skill v2.0 - 发布说明
 
 **版本**: 2.0.0  
 **发布日期**: 2026-03-20  
