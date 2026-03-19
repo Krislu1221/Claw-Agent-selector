@@ -1,21 +1,16 @@
-# Agent selector Skill v2.0 - 发布说明
+# Agent Selector Skill v2.0 - 发布说明
 
 **版本**: 2.0.0  
 **发布日期**: 2026-03-20  
 **作者**: Krislu  
 **许可证**: MIT
 
-## 📋 技能说明
-
-**全局技能**，基于 Agency-Agent 人格库的优化，在不同专家人格之间自动切换，支持 146+ 个专业 Agent。根据对话自动适配，判定任务结束自动切换回初始人格，无须手动频繁切换。避免人格的混乱，同时始终保持最适合的人格工作。
-
-该功能也集成在 Auto-coding 和 RoundTable skill 中。
 ---
 
 ## 📦 安装包内容
 
 ```
-agent-switcher-skill/
+agent-selector-skill/
 ├── SKILL.md                  # 技能文档
 ├── README.md                 # 本文件
 ├── __init__.py               # 模块导出
@@ -30,18 +25,18 @@ agent-switcher-skill/
 ### 方法 1：从 ClawHub 安装（推荐）
 
 ```bash
-clawhub install agent-switcher
+clawhub install agent-selector
 ```
 
 ### 方法 2：本地安装
 
 ```bash
 # 复制技能目录到 skills 文件夹
-cp -r agent-switcher-skill <YOUR_OPENCLAW_WORKSPACE>/skills/
+cp -r agent-selector-skill <YOUR_OPENCLAW_WORKSPACE>/skills/
 
 # 创建符号链接（如果使用外部 agency-agents）
 ln -s <YOUR_OPENCLAW_WORKSPACE>/skills/agency-agents \
-      <YOUR_OPENCLAW_WORKSPACE>/skills/agent-switcher-skill/agency-agents
+      <YOUR_OPENCLAW_WORKSPACE>/skills/agent-selector-skill/agency-agents
 ```
 
 ---
@@ -51,7 +46,7 @@ ln -s <YOUR_OPENCLAW_WORKSPACE>/skills/agency-agents \
 ### 1. 自动选择 Agent
 
 ```python
-from agent_switcher_skill import auto_select_agent
+from agent_selector_skill import auto_select_agent
 
 agent = auto_select_agent("设计 React 前端架构")
 print(f"推荐 Agent: {agent}")
@@ -61,7 +56,7 @@ print(f"推荐 Agent: {agent}")
 ### 2. 手动切换人格
 
 ```python
-from agent_switcher_skill import AgentSelector
+from agent_selector_skill import AgentSelector
 
 selector = AgentSelector()
 prompt = selector.load_agent_prompt("engineering/engineering-frontend-developer")
@@ -72,7 +67,7 @@ prompt = selector.load_agent_prompt("engineering/engineering-frontend-developer"
 ### 3. RoundTable 多 Agent 讨论
 
 ```python
-from agent_switcher_skill import select_roundtable_agents
+from agent_selector_skill import select_roundtable_agents
 
 agents = select_roundtable_agents("智能客服系统技术方案")
 print(f"推荐 Agent: {', '.join(agents)}")
@@ -197,7 +192,7 @@ class AgentController:
 ### 运行内置测试
 
 ```bash
-cd agent-switcher-skill
+cd agent-selector-skill
 python3 agent_selector.py
 ```
 
@@ -205,7 +200,7 @@ python3 agent_selector.py
 
 ```
 ============================================================
-Agent Switcher - 安全增强版测试
+Agent Selector - 安全增强版测试
 ============================================================
 
 📊 可用 Agent 数量：146
@@ -300,9 +295,9 @@ copies or substantial portions of the Software.
 
 ## 🔗 相关链接
 
-- **ClawHub**: https://clawhub.com/skills/agent-switcher
-- **GitHub**: https://github.com/openclaw/skills/agent-switcher
-- **文档**: https://docs.openclaw.ai/skills/agent-switcher
+- **ClawHub**: https://clawhub.com/skills/agent-selector
+- **GitHub**: https://github.com/openclaw/skills/agent-selector
+- **文档**: https://docs.openclaw.ai/skills/agent-selector
 
 ---
 
@@ -315,4 +310,4 @@ copies or substantial portions of the Software.
 
 ---
 
-*Agent Switcher - 让你成为任何需要的专家*
+*Agent Selector - 让你成为任何需要的专家*

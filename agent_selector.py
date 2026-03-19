@@ -868,7 +868,7 @@ def switch_agent(agent_id: str, agent_source: str = "") -> str:
 
 if __name__ == "__main__":
     print("="*60)
-    print("Agent Switcher - 安全增强版 + 自动身份管理测试")
+    print("Agent Selector - 安全增强版 + 自动身份管理测试")
     print("="*60)
     
     selector = AgentSelector()

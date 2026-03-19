@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Agent Switcher Skill - 人格身份切换
+Agent Selector Skill - 人格身份切换
 
 导出接口：
 - AgentSelector: Agent 选择器（安全增强版）

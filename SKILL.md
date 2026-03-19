@@ -1,4 +1,4 @@
-# Agent Switcher Skill v2.0 - 人格身份切换
+# Agent Selector Skill v2.0 - 人格身份切换
 
 ## 📋 技能说明
 
@@ -22,7 +22,7 @@
 ### 方式 1：自动选择 Agent
 
 ```python
-from agent_switcher_skill import auto_select_agent
+from agent_selector_skill import auto_select_agent
 
 # 根据任务自动匹配合适的 Agent
 agent = auto_select_agent("设计 React 前端架构")
@@ -32,7 +32,7 @@ agent = auto_select_agent("设计 React 前端架构")
 ### 方式 2：手动切换人格
 
 ```python
-from agent_switcher_skill import AgentSelector
+from agent_selector_skill import AgentSelector
 
 selector = AgentSelector()
 
@@ -45,7 +45,7 @@ prompt = selector.load_agent_prompt("engineering/engineering-frontend-developer"
 ### 方式 3：RoundTable 专用
 
 ```python
-from agent_switcher_skill import select_roundtable_agents
+from agent_selector_skill import select_roundtable_agents
 
 # 为 RoundTable 讨论选择合适的 Agent
 agents = select_roundtable_agents("智能客服系统技术方案")
@@ -103,7 +103,7 @@ agents = select_roundtable_agents("智能客服系统技术方案")
 
 ```python
 from roundtable_skill import RoundTableEngine
-from agent_switcher_skill import select_roundtable_agents
+from agent_selector_skill import select_roundtable_agents
 
 # 自动选择合适的 Agent
 agents = select_roundtable_agents("智能客服系统技术方案")
@@ -122,7 +122,7 @@ await engine.run(user_channel)
 
 ```python
 from auto_coding import AutoCodingAgent
-from agent_switcher_skill import auto_select_agent
+from agent_selector_skill import auto_select_agent
 
 # 根据任务自动选择 Agent
 agent_id = auto_select_agent("开发 Python REST API")
@@ -172,7 +172,7 @@ AgentSelector("../secret")  # 相对路径攻击
 ## 📁 文件结构
 
 ```
-agent-switcher-skill/
+agent-selector-skill/
 ├── SKILL.md                  # 本文档
 ├── __init__.py               # 模块导出
 ├── agent_selector.py         # 核心选择器（安全增强版）
@@ -214,14 +214,14 @@ selector = AgentSelector("/path/to/external")  # 会抛出 ValueError
 
 ```bash
 # 运行内置测试
-cd <YOUR_OPENCLAW_WORKSPACE>/skills/agent-switcher-skill
+cd <YOUR_OPENCLAW_WORKSPACE>/skills/agent-selector-skill
 python3 agent_selector.py
 ```
 
 **预期输出**:
 ```
 ============================================================
-Agent Switcher - 安全增强版测试
+Agent Selector - 安全增强版测试
 ============================================================
 
 📊 可用 Agent 数量：146
@@ -294,7 +294,7 @@ except ValueError as e:
 
 ## 🔗 相关链接
 
-- **ClawHub**: https://clawhub.com/skills/agent-switcher
+- **ClawHub**: https://clawhub.com/skills/agent-selector
 - **RoundTable Skill**: `roundtable-skill/`
 - **Auto-Coding**: `auto-coding/`
 - **Agency Agents**: `agency-agents/`
@@ -325,4 +325,4 @@ MIT License - 虾软 Claw soft
 
 ---
 
-*Agent Switcher - 让你成为任何需要的专家*
+*Agent Selector - 让你成为任何需要的专家*

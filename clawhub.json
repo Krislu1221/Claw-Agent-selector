@@ -1,13 +1,13 @@
 {
-  "name": "agent-switcher",
+  "name": "agent-selector",
   "version": "2.0.0",
   "description": "全局人格身份切换技能 - 基于 Agency-Agent 人格库，自动切换 146+ 专业 Agent，任务完成自动恢复默认身份",
   "author": "Krislu",
   "license": "MIT",
-  "summary": "Agent Switcher - 自动身份管理技能，根据对话自动适配专家人格，支持缓存优化和懒加载",
+  "summary": "Agent Selector - 自动身份管理技能，根据对话自动适配专家人格，支持缓存优化和懒加载",
   "tags": [
     "agent",
-    "switcher",
+    "selector",
     "persona",
     "identity",
     "role-switching",
@@ -60,7 +60,7 @@
     "avgLoadTime": "50-200ms"
   },
   "examples": [
-    "from agent_switcher_skill import AgentSelector",
+    "from agent_selector_skill import AgentSelector",
     "selector = AgentSelector()",
     "selector.analyze_and_switch('代码安全检查')",
     "prompt = selector.get_prompt()",
